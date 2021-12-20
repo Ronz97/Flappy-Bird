@@ -85,6 +85,9 @@ class passaro:
         posicao_centro_imagen = self.imagen.get_rect(topleft=(self.x, self.y)).center
         retangulo = imagen_rotacionada.get_rect(center=posicao_centro_imagen)
         tela.blit(imagen_rotacionada, retangulo.topleft)
+
+    def get_mask(self):
+        pygame.mask.from_surface(self.imagen)
         
         
         
